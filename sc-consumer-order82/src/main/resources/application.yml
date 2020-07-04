@@ -1,0 +1,28 @@
+server:
+  port: 82
+spring:
+  application:
+    name: sc-order-service-consul
+  datasource:
+    url: jdbc:mysql://localhost:3306/order?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+mybatis:
+  # model的包
+  type-aliases-package: com.xuzf.entities
+  configuration:
+    map-underscore-to-camel-case: true # 开启驼峰uName自动映射到u_name
+  mapper-locations: classpath:mapper/*.xml
+
+# 打印sql
+logging:
+  level:
+    ssm.app.mapper : debug

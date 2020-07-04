@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: sc-eureka-server7001
+server:
+  port: 7001
+eureka:
+  instance:
+    #eureka服务端配置
+    prefer-ip-address: false
+    #   不使用主机名来定义注册中心的地址,而使用IP地址的形式
+    status-page-url-path: /actuator/info
+    # 获取此实例状态页的URL路径，然后构造出主机名，安全端口等，默认为/info
+    health-check-url-path: /actuator/health
+    hostname: eureka7001 #eureak注册实例的名称
+  client:
+    register-with-eureka: false #表示eureka不会注册自己
+    fetch-registry: false
+    service-url:
+      defaultZone: http://eureka7002:7002/eureak/
