@@ -3,6 +3,14 @@ server:
 spring:
   application:
     name: sc-order-service
+  zipkin:
+    # 放到 zipkin上
+    base-url: http://localhost:9411
+  #用于sleuth监控
+  sleuth:
+    sampler:
+      # 采样率介于0-1之间，1表示全部采集
+      probability: 1
   datasource:
     url: jdbc:mysql://localhost:3306/order?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
