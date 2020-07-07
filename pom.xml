@@ -29,6 +29,8 @@
       <module>sc-provider-stream-rabbitmq8801</module>
     <module>sc-consumer-stream-rabbitmq8802</module>
     <module>sc-consumer-stream-rabbitmq8803</module>
+    <module>sc-ali-provider-Payment9001</module>
+    <module>sc-ali-provider-Payment9002</module>
   </modules>
   <packaging>pom</packaging>
   <properties>
