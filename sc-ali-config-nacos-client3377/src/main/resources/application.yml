@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: info
+#    active: dev # 表示开发环境
+#    active: test
+db:
+  num: 1
+  url:
+    0: jdbc:mysql://11.162.196.16:3306/nacos_devtest?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true
+  db.user=nacos_devtest
+  db.password=youdontknow

@@ -31,6 +31,15 @@
     <module>sc-consumer-stream-rabbitmq8803</module>
     <module>sc-ali-provider-Payment9001</module>
     <module>sc-ali-provider-Payment9002</module>
+    <module>sc-ali-consumer-order83</module>
+    <module>sc-ali-config-nacos-client3377</module>
+    <module>sc-ali-sentinel-service8401</module>
+      <module>sc-ali-nacos-consumer-order84</module>
+    <module>sc-ali-provider-payment9003</module>
+    <module>sc-ali-provider-payment9004</module>
+      <module>sc-ali-seata-order-service2001</module>
+      <module>sc-ali-seata-account-service2002</module>
+    <module>sc-ali-seata-storage-service2003</module>
   </modules>
   <packaging>pom</packaging>
   <properties>
@@ -45,7 +54,7 @@
     <spring-boot.version>2.2.2.RELEASE</spring-boot.version>
     <mybais.spring.boot.version>1.3.0</mybais.spring.boot.version>
     <spring-cloud.version>Hoxton.SR1</spring-cloud.version>
-    <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
+    <spring-cloud-alibaba.version>2.2.0.RELEASE</spring-cloud-alibaba.version>
     <project.version>1.0-SNAPSHOT</project.version>
   </properties>
   <!--子模块继承后，提供作用：锁定版本+子module不用groupId和version-->

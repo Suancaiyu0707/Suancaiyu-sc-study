@@ -13,7 +13,7 @@ public class PaymentController {
     private String serverport;
 
     @GetMapping(value = "/payment/nacos/{id}")
-    public String getPyment(@PathVariable("id") Integer id){
+    public String getPayment(@PathVariable("id") Integer id){
         return "我是 nacos 注册,port:"+serverport+"\t id:"+id;
     }
 }

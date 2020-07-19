@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xuzf.mapper.OrderDao">
+    <resultMap id="resultMap" type="com.xuzf.domain.Order">
+        <id column="id" property="id" javaType="int"/>
+        <result column="user_id" property="userId" javaType="int"/>
+        <result column="product_id" property="productId" javaType="Int"/>
+        <result column="count" property="count" javaType="int"/>
+        <result column="money" property="money" jdbcType="DECIMAL"/>
+        <result column="status" property="status" javaType="java.lang.String"/>
+    </resultMap>
+    <insert id="create" parameterType="com.xuzf.domain.Order">
+        insert into t_order(user_id,product_id,count,money,status) values (#{userId},#{productId},#{count},#{money},0)
+    </insert>
+    <update id="update">
+        update t_order set status=1 where user_id =#{userId} and status=#{status}
+    </update>
+</mapper>
